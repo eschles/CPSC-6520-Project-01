@@ -1,4 +1,4 @@
-# View --> Updates the screen
+# Initial test file 
 
 import pygame
 from sys import exit
