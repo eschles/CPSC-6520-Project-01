@@ -1,3 +1,4 @@
 #importing .py files into init()
 
-import Dummy
+#import Dummy
+from Stuff import FrameViewer
