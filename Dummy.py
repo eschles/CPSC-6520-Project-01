@@ -90,8 +90,4 @@ while True:
     pygame.draw.rect(screen, ball_color, ball_surface)
 
     # Update the screen to show the changes
-<<<<<<< HEAD
     pygame.display.flip()
-=======
-    pygame.display.flip()
->>>>>>> f3bd649c7f162b0a9c432b807516ede8348945cb
