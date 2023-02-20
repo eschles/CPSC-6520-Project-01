@@ -1,4 +1,4 @@
-# Loop
+# Your game should have a game loop that updates the game's state, draws the game on the screen, and handles input events.
 import pygame
 from sys import exit
 

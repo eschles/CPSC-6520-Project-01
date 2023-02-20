@@ -1,0 +1,1 @@
+# Your game should have a main script that ties everything together and starts the game loop.

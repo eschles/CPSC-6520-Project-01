@@ -1,4 +1,5 @@
-# Initial test file 
+# Your game should have a view that displays the game on the screen.
+# Updating Screen: Your game should update the screen after each iteration of the game loop.
 
 import pygame
 #from sys import exit

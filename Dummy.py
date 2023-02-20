@@ -7,8 +7,7 @@ import pygame.time
 # Define Screen Size
 SCREEN_SIZE = SCREEN_WIDTH, SCREEN_HEIGHT = 800, 400
 screenColor = ('white')
-
-# Set the size, starting position, color, and speed of the paddle
+    
 PADDLE_SIZE = PADDLE_WIDTH, PADDLE_HEIGHT = 16, 100
 PADDLE_POS = PADDLE_X, PADDLE_Y = 0, (SCREEN_HEIGHT - PADDLE_HEIGHT) / 2
 paddleColor = ('black')
@@ -38,6 +37,11 @@ wall_surface = pygame.Rect((SCREEN_SIZE), (SCREEN_SIZE))
 #Defining clock and delt_time to make the paddle movement smooth
 clock = pygame.time.Clock()
 delta_time = clock.tick(100) / 1000.0
+
+# Since the game requires two paddles, this class will store info for one paddle
+# class Paddle:
+    # Set the size, starting position, color, and speed of the paddle
+    
 
 # function for keyboard input for paddle up and down
 def move_rect(paddle_surface):
