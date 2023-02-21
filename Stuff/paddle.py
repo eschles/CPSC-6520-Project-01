@@ -15,3 +15,10 @@ paddle_speed = 10
 
 # Create the paddle surface
 paddle_surface = pygame.Rect((PADDLE_X, PADDLE_Y, PADDLE_WIDTH, PADDLE_HEIGHT))
+
+def paddleDraw(screen):
+    paddle = pygame.draw.rect(screen, paddleColor, paddle_surface)
+    return paddle
+
+def sharePaddleColor():
+    return paddleColor

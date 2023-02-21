@@ -1,12 +1,12 @@
 # Your game should have a game loop that updates the game's state, draws the game on the screen, and handles input events.
 
 import pygame
-from Stuff import paddle
-from Stuff import EventHandler
+#from Stuff import paddle
+from Stuff import Controller
 from sys import exit
 from Stuff import pong
 
-def gameLoop(screen, screenColor, paddle_surface):
+def gameLoop(screen, screenColor, paddle_surface, paddleColor, pongBall, pongColor):
     # while loop to keep the window available until quit
     while True:
     # get events from the queue & handle events every frame
@@ -15,20 +15,25 @@ def gameLoop(screen, screenColor, paddle_surface):
                 pygame.quit()
                 exit()
 
-        # display screen until quit
-        pygame.display.update()
-
         # calling the paddle movement function
-        EventHandler.move_rect(paddle_surface)
+        Controller.move_rect(paddle_surface)
 
         # calling the ball movement function
-        pong.move_ball(pong.ball_surface)
-
-        # draw the ball
-        pygame.draw.rect(screen, pong.ball_color, pong.ball_surface)
+        #pong.move_ball(pong.ball_surface)
 
         # applying color on the display screen
         screen.fill(screenColor)
 
-        # draw at the initial position and redraw the paddle at the position at which it is moved
-        pygame.draw.rect(screen, paddle.paddleColor, paddle_surface)
+        # redraw the paddle at the position at which it is moved
+        pygame.draw.rect(screen, paddleColor, paddle_surface)
+
+        #fetch the new position of the ball as it moves
+        #ballNewPos = Controller.updateBallPosition(pongBall, pong.ball_velocity_x, pong.ball_velocity_y, paddle_surface)
+        ballNewPos = Controller.updateBallPosition(pongBall, paddle_surface)
+
+        # draw the ball
+        #pygame.draw.rect(screen, pong.ball_color, pong.ball_surface)
+        pygame.draw.circle(screen, pongColor, ballNewPos, pong.BALL_RADIUS)
+
+        # display screen until quit
+        pygame.display.update()
