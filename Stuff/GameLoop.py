@@ -1,8 +1,11 @@
 # Your game should have a game loop that updates the game's state, draws the game on the screen, and handles input events.
+
 import pygame
+from Stuff import paddle
+from Stuff import EventHandler
 from sys import exit
 
-def gameLoop(screen, screenColor):
+def gameLoop(screen, screenColor, paddle_surface):
     # while loop to keep the window available until quit
     while True:
     # get events from the queue & handle events every frame
@@ -14,5 +17,11 @@ def gameLoop(screen, screenColor):
         # display screen until quit
         pygame.display.update()
 
+        # calling the paddle movement function
+        EventHandler.move_rect(paddle_surface)
+
         # applying color on the display screen
         screen.fill(screenColor)
+
+        # draw at the initial position and redraw the paddle at the position at which it is moved
+        pygame.draw.rect(screen, paddle.paddleColor, paddle_surface)
