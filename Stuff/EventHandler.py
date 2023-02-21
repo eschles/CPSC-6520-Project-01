@@ -1,4 +1,4 @@
-# Your game should have a model that represents the game's data and the current state of the game.
+# Model: Your game should have a model that represents the game's data and the current state of the game.
 # State of the game: Your game should keep track of the state of the game and update it based on input events and other events.
 
 # Controller: Your game should have a controller that controls the game's logic and handles input events.

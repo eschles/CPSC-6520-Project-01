@@ -4,6 +4,7 @@ import pygame
 from Stuff import paddle
 from Stuff import EventHandler
 from sys import exit
+from Stuff import pong
 
 def gameLoop(screen, screenColor, paddle_surface):
     # while loop to keep the window available until quit
@@ -19,6 +20,12 @@ def gameLoop(screen, screenColor, paddle_surface):
 
         # calling the paddle movement function
         EventHandler.move_rect(paddle_surface)
+
+        # calling the ball movement function
+        pong.move_ball(pong.ball_surface)
+
+        # draw the ball
+        pygame.draw.rect(screen, pong.ball_color, pong.ball_surface)
 
         # applying color on the display screen
         screen.fill(screenColor)
