@@ -1,4 +1,6 @@
 # Your game should have a main script that ties everything together and starts the game loop.
+# Main game script: Your game should have a main script that ties everything together
+# and starts the game loop.
 #scp -r <folder>/ cmurmu@access.computing.clemson.edu <folder location>
 
 import pygame
@@ -33,8 +35,10 @@ pong = po.pongDraw(screen)
 #Fetch pong color
 pongColor = po.sharePongColor()
 
+font = f.defineFont()
+
 #calling Game loop from the main
-GameLoop.gameLoop(screen, screenColor, paddle, paddleColor, pong, pongColor)
+GameLoop.gameLoop(screen, screenColor, paddle, paddleColor, pong, pongColor, font)
 
 
 

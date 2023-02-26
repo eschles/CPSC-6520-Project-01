@@ -11,7 +11,7 @@ displayScreen = FrameViewer
 PADDLE_SIZE = PADDLE_WIDTH, PADDLE_HEIGHT = 16, 100
 PADDLE_POS = PADDLE_X, PADDLE_Y = 0, (displayScreen.SCREEN_HEIGHT - PADDLE_HEIGHT) / 2
 paddleColor = ('black')
-paddle_speed = 10
+paddle_speed = 1000 #keeping speed highest for faster control on the paddle
 
 # Create the paddle surface
 paddle_surface = pygame.Rect((PADDLE_X, PADDLE_Y, PADDLE_WIDTH, PADDLE_HEIGHT))

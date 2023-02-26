@@ -2,7 +2,7 @@
 
 # Ball Movement:
 # Apply contstant velocity in a single direction
-# Upon collision, apply acceleration in another direction
+# Upon collision, reverse velocity another direction
 
 import pygame, sys
 import random
@@ -17,12 +17,9 @@ BALL_POS = BALL_X, BALL_Y = (displayScreen.SCREEN_WIDTH - BALL_RADIUS), (display
 ball_color = ('blue')
 ball_speed = 5
 BALL_RADIUS = 7
-ball_velocity_x = random.uniform(-1, 1)
-ball_velocity_y = random.uniform(-1, 1)
-
-
-# Create the ball surface
-ball_surface = pygame.Rect((BALL_X, BALL_Y, BALL_WIDTH, BALL_HEIGHT))
+#removed random speed and provided fixed speed
+ball_velocity_x = 500 #random.uniform(-2, 2)
+ball_velocity_y = 500 #random.uniform(-2, 2)
 
 def pongDraw(screen):
     pong = pygame.draw.circle(screen, ball_color, BALL_POS, BALL_RADIUS)
