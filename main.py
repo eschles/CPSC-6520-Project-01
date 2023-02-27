@@ -23,11 +23,11 @@ screen = f.drawDisplay()
 #Fetch the Game Screen Color
 screenColor = f.shareScreenColor()
 
-#Draw Paddle
-paddle = p.paddleDraw(screen)
+#Draw Paddles
+paddle, paddle_2 = p.paddleDraw(screen)
 
-#Fetch paddle color
-paddleColor = p.sharePaddleColor()
+#Fetch paddle colors
+paddleColor1, paddleColor2 = p.sharePaddleColor()
 
 #Draw pong
 pong = po.pongDraw(screen)
@@ -38,7 +38,7 @@ pongColor = po.sharePongColor()
 font = f.defineFont()
 
 #calling Game loop from the main
-GameLoop.gameLoop(screen, screenColor, paddle, paddleColor, pong, pongColor, font)
+GameLoop.gameLoop(screen, screenColor, paddle, paddle_2, paddleColor1, paddleColor2, pong, pongColor, font)
 
 
 
