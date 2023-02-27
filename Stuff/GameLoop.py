@@ -23,8 +23,8 @@ def gameLoop(screen, screenColor, paddle_surface, paddleColor, pongBall, pongCol
         # calling the paddle movement function
         Controller.move_rect(paddle_surface)
 
-        # applying color on the display screen
-        screen.fill(screenColor)
+        # Draw background
+        screen.blit(screenColor, (0,0))
 
         # redraw the paddle at the position at which it is moved
         pygame.draw.rect(screen, paddleColor, (paddle.PADDLE_X, paddle.PADDLE_Y, paddle.PADDLE_WIDTH, paddle.PADDLE_HEIGHT))
