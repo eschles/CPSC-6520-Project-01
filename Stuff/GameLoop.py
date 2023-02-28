@@ -11,7 +11,7 @@ from Stuff import Model
 
 mod = Model
 
-def gameLoop(screen, screenColor, paddle_surface, paddleColor, pongBall, pongColor, font):
+def gameLoop(screen, screenColor, paddle_surface, paddle_surface_2, paddleColor1, paddleColor2, pongBall, pongColor, font):
     # while loop to keep the window available until quit
     while True:
     # get events from the queue & handle events every frame
@@ -21,16 +21,19 @@ def gameLoop(screen, screenColor, paddle_surface, paddleColor, pongBall, pongCol
                 exit()
 
         # calling the paddle movement function
-        Controller.move_rect(paddle_surface)
+        Controller.move_rect(paddle_surface, paddle_surface_2)
 
-        # applying color on the display screen
-        screen.fill(screenColor)
+        # Draw background
+        screen.blit(screenColor, (0,0))
 
         # redraw the paddle at the position at which it is moved
-        pygame.draw.rect(screen, paddleColor, (paddle.PADDLE_X, paddle.PADDLE_Y, paddle.PADDLE_WIDTH, paddle.PADDLE_HEIGHT))
+        pygame.draw.rect(screen, paddleColor1, (paddle.PADDLE_X, paddle.PADDLE_Y, paddle.PADDLE_WIDTH, paddle.PADDLE_HEIGHT))
+
+        # redraw the paddle at the position at which it is moved
+        pygame.draw.rect(screen, paddleColor2, (paddle.PADDLE_X_2, paddle.PADDLE_Y_2, paddle.PADDLE_WIDTH, paddle.PADDLE_HEIGHT))
 
         #fetch the new position of the ball as it moves
-        Controller.updateBallPosition(paddle_surface)
+        Controller.updateBallPosition(paddle_surface, paddle_surface_2)
 
         # draw the ball
         pygame.draw.circle(screen, pongColor, (pong.BALL_X, pong.BALL_Y), pong.BALL_RADIUS)

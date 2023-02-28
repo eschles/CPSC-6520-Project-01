@@ -14,22 +14,30 @@ po_var = pong
 mod = Model
 
 # function for keyboard input for paddle up and down
-def move_rect(paddle_surface):
+def move_rect(paddle_surface, paddle_surface_2):
     #Defining clock and delt_time to make the paddle movement smooth
     clock = pygame.time.Clock()
     delta_time = clock.tick(300) / 1000.0
 
     #defining key press
     keys = pygame.key.get_pressed()
+    
     paddle_surface.y += p_var.paddle_speed * delta_time
+    paddle_surface_2.y += p_var.paddle_speed * delta_time
     
     #when Up arrow key or down arrow key is pressed to move the paddle
-    if keys[pygame.K_UP] and p_var.PADDLE_Y > 0:
+    if keys[pygame.K_UP] and p_var.PADDLE_Y_2 > 0:
+        p_var.PADDLE_Y_2 -= (p_var.paddle_speed * delta_time)
+    elif keys[pygame.K_DOWN] and p_var.PADDLE_Y_2 < f_var.SCREEN_HEIGHT - p_var.PADDLE_HEIGHT:
+        p_var.PADDLE_Y_2 += (p_var.paddle_speed * delta_time)
+
+    #when "A" (up) key or "Z" (down) key is pressed to move the paddle
+    if keys[pygame.K_a] and p_var.PADDLE_Y > 0:
         p_var.PADDLE_Y -= (p_var.paddle_speed * delta_time)
-    elif keys[pygame.K_DOWN] and p_var.PADDLE_Y < f_var.SCREEN_HEIGHT - p_var.PADDLE_HEIGHT:
+    elif keys[pygame.K_z] and p_var.PADDLE_Y < f_var.SCREEN_HEIGHT - p_var.PADDLE_HEIGHT:
         p_var.PADDLE_Y += (p_var.paddle_speed * delta_time)
 
-def updateBallPosition(paddle_surface):
+def updateBallPosition(paddle_surface, paddle_surface_2):
     #Defining clock and delt_time to make the paddle movement smooth
     clock = pygame.time.Clock()
     delta_time = clock.tick(500) / 1000.0
@@ -52,6 +60,15 @@ def updateBallPosition(paddle_surface):
         
     # Check if ball hits paddle and reverse direction (both x & y) if necessary
     if po_var.BALL_X < (p_var.PADDLE_WIDTH + po_var.BALL_RADIUS) and po_var.BALL_Y > (p_var.PADDLE_Y) and po_var.BALL_Y < (p_var.PADDLE_Y + p_var.PADDLE_HEIGHT):
+        # Keep a score of the number of times ball touches the paddle
+        mod.PADDLE_HIT += 1
+
+        # reverse ball direction
+        po_var.ball_velocity_x = -po_var.ball_velocity_x
+        po_var.ball_velocity_y = -po_var.ball_velocity_y
+
+    # Check if ball hits paddle 2 and reverse direction (both x & y) if necessary
+    if po_var.BALL_X < (p_var.PADDLE_WIDTH + po_var.BALL_RADIUS) and po_var.BALL_Y > (p_var.PADDLE_Y_2) and po_var.BALL_Y < (p_var.PADDLE_Y_2 + p_var.PADDLE_HEIGHT):
         # Keep a score of the number of times ball touches the paddle
         mod.PADDLE_HIT += 1
 
