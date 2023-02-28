@@ -33,14 +33,14 @@ def gameLoop(screen, screenColor, paddle_surface, paddle_surface_2, paddleColor1
         pygame.draw.rect(screen, paddleColor2, (paddle.PADDLE_X_2, paddle.PADDLE_Y_2, paddle.PADDLE_WIDTH, paddle.PADDLE_HEIGHT))
 
         #fetch the new position of the ball as it moves
-        Controller.updateBallPosition(paddle_surface, paddle_surface_2)
+        Controller.updateBallPosition(paddle_surface)
 
         # draw the ball
         pygame.draw.circle(screen, pongColor, (pong.BALL_X, pong.BALL_Y), pong.BALL_RADIUS)
 
         # Draw the scores
-        paddleScore = font.render("Paddle Hit: " + str(mod.PADDLE_HIT), True, (210,23,13))
-        wallHit = font.render("Wall Hit: " + str(mod.WALL_HIT), True, (102,31,210))
+        paddleScore = font.render("Paddle Hit: " + str(mod.PADDLE_HIT), True, (247,247,0))
+        wallHit = font.render("Wall Hit: " + str(mod.WALL_HIT), True, (247,247,0))
         screen.blit(paddleScore, (400 // 4, 200 // 10))
         screen.blit(wallHit, (400 * 5 // 4, 200 // 10))
 
