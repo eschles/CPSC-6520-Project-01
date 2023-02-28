@@ -27,6 +27,7 @@ Project 1 for CPSC 6520 -- Chandni Murmu and Alex Schlesener
 ------------------------------------------------------------------------------------------------
 # Include your Game Document as your Git README.
 # Game Image
+![Alt text](2D_Game_Engine_Flowchart%20-%20Frame%201.jpg)
 
 # Program Versions
 
@@ -49,7 +50,8 @@ Include a diagram or image that shows the relationships between the classes, fun
 How can you further enhance the game engine elements of the game?
 Discuss how you can further improve the game engine and add new features to the game.
 
-# Generalization: Discuss how the game could be generalized to other types of games or applications.
+# Generalization:
+Discuss how the game could be generalized to other types of games or applications.
 
 ------------------------------------------------------------------------------------------------
 # Rubric
