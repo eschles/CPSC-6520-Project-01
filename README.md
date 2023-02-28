@@ -27,7 +27,7 @@ Project 1 for CPSC 6520 -- Chandni Murmu and Alex Schlesener
 ------------------------------------------------------------------------------------------------
 # Include your Game Document as your Git README.
 # Game Image
-![](../../../../../Downloads/2D_Game_Engine_Flowchart%20-%20Frame%201.jpg)
+
 # Program Versions
 
 - OS Version: Windows 10 and MacOS
