@@ -25,6 +25,33 @@ Project 1 for CPSC 6520 -- Chandni Murmu and Alex Schlesener
 1. Discuss how the game could be generalized to other types of games or applications.
 
 ------------------------------------------------------------------------------------------------
+# Include your Game Document as your Git README.
+# Game Image
+![](../../../../../Downloads/2D_Game_Engine_Flowchart%20-%20Frame%201.jpg)
+# Program Versions
+
+- OS Version: Windows 10 and MacOS
+
+- Python Version: Python 3.11.1
+
+- Pygame Version: pygame 2.1.3.dev8 (SDL 2.0.22, Python 3.11.1)
+
+# Motivation behind the game chosen:
+Explain why you chose to build the game that you did and what inspired you.
+
+# Reasoning behind the structure:
+Discuss the reasoning behind the structure of your game and why you chose to implement it in the way that you did.
+
+# Image of classes and functions and connections:
+Include a diagram or image that shows the relationships between the classes, functions, and variables in your game.
+
+# Future Work:
+How can you further enhance the game engine elements of the game?
+Discuss how you can further improve the game engine and add new features to the game.
+
+# Generalization: Discuss how the game could be generalized to other types of games or applications.
+
+------------------------------------------------------------------------------------------------
 # Rubric
 # Game Loop (10 points)
 - The game has a functional game loop that updates the game state (model), draws the game on the screen (view), and handles input events (controller).
