@@ -10,7 +10,7 @@
 Play by yourself or with a partner! Player 1 presses the "A" key for up, and "Z" for down, while Player 2 uses the "Up" and "Down" arrows on the right side of the keyboard. Enjoy!
 
 ## Game Demo Video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NjVY0QqgOcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[GameDemoVideo](https://youtu.be/NjVY0QqgOcM)
 
 -------------------------------------------------------------------------------------------
 
