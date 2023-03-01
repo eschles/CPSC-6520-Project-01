@@ -42,7 +42,7 @@ Play by yourself or with a partner! Player 1 presses the "A" key for up, and "Z"
   The main reason for this game structure is its potential for generalization. Our goal is to use pieces of this game engine in future Pygame projects, specifically the model, view, and controller. For this reason, entities specific to this particular game (i.e. pong/paddle) are included in their own scripts. 
 
 ## Image of Classes, Functions, and Connections:
-![Alt text](Stuff/images/2D_Game_Engine_Flowchart%20-%20Frame%201.jpg)
+![Alt text](Stuff/images/2D%20Game%20Design%20Flowchart%201%20-%20Frame%201.jpg)
 
 ## Future Work:
 - How can you further enhance the game engine elements of the game? Discuss how you can further improve the game engine and add new features to the game.
