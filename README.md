@@ -2,7 +2,13 @@
 # Chandni Murmu and Alex Schlesener
 
 ------------------------------------------------------------------------------------------
-[Place Screenshot Here]
+## Game Image
+
+![Alt text](Stuff/images/Pong_Screenshot.JPG)
+
+## Rules of Play
+Play by yourself or with a partner! Player 1 presses the "A" key for up, and "Z" for down, while Player 2 uses the "Up" and "Down" arrows on the right side of the keyboard. Enjoy!
+
 -------------------------------------------------------------------------------------------
 
 ## Program Versions
@@ -16,47 +22,35 @@
 --------------------------------------------------------------------------------------------
 
 ## Motivation behind the game chosen: 
-1. Explain why you chose to build the game that you did and what inspired you.
-   
-2. Reasoning behind the structure: Discuss the reasoning behind the structure of your game and why you chose to implement it in the way that you did.
+- Explain why you chose to build the game that you did and what inspired you.
 
-3. Image of classes and functions and connections: Include a diagram or image that shows the relationships between the classes, functions, and variables in your game.
-### Game Image
-![Alt text](2D_Game_Engine_Flowchart%20-%20Frame%201.jpg)
+  This assignment, we decided to re-create Pong -- one of the first computer games ever created. Considering both of us are new to the Pygame library, we thought this game would be a fun way to learn the system; fortunately, we were right! Through this project, we were able to develop a much more thorough understanding of Python, while also learning the fundamentals of game design. This list includes game loops, models, views, and controllers! 
+
+## Reasoning behind the structure:  
+- Discuss the reasoning behind the structure of your game and why you chose to implement it in the way that you did.
+  
+  Our game structure (visualized in the image below), consists of seven major parts: main, Controller, FrameViewer, GameLoop, Model, paddle, and pong. 
+    - The main script (outside of the "Stuff" folder) starts the script -- its main purpose is to "tie together" all other parts of the game. 
+    - The Controller script handles all input events (i.e. paddle movement) and game logic (i.e. ball movement).
+    - The FrameViewer script displays the game on the screen (i.e. background image).
+    - The GameLoop continuously updates the game state, while drawing new frames on the screen and gathering all input events. 
+    - The Model script handles all game data and tracks the state of the game (i.e. tracking how many times the ball hits the paddle or the wall).
+    - The "things" or "entities" within the game are handled in separate scripts: 
+      - The paddle script defines all aspects of the paddles, including its color, size, and speed.
+      - The pong script defines the ball's main attributes, including its color, size, and speed.
+  
+  The main reason for this game structure is its potential for generalization. Our goal is to use pieces of this game engine in future Pygame projects, specifically the model, view, and controller. For this reason, entities specific to this particular game (i.e. pong/paddle) are included in their own scripts. 
+
+## Image of Classes, Functions, and Connections:
+![Alt text](Stuff/images/2D_Game_Engine_Flowchart%20-%20Frame%201.jpg)
 
 ## Future Work:
-1. How can you further enhance the game engine elements of the game? Discuss how you can further improve the game engine and add new features to the game.
+- How can you further enhance the game engine elements of the game? Discuss how you can further improve the game engine and add new features to the game.
+
+  A major way that we can further enhance our current game engine design is through the implementation of classes. This will allow for instancing to be possible, which will lead to further generalization of our code. Additionally, from a design perspective, we would love to enhance the frontend of this game, with new paddles and a scoreboard to track results. 
 
 ## Generalization: 
-1. Discuss how the game could be generalized to other types of games or applications.
-
-------------------------------------------------------------------------------------------------
-
-### Rubric
-### Game Loop (10 points)
-- The game has a functional game loop that updates the game state (model), draws the game on the screen (view), and handles input events (controller).
-- The game loop is well-structured and easy to understand.
-### Model (20 points)
-- The game has a model that represents the game's data and the current state of the game.
-- The model is well-structured and easy to understand.
-### View (20 points)
-- The game has a view that displays the game on the screen.
-- The view is well-structured and easy to understand.
-### Controller (20 points)
-- The game has a controller that controls the game's logic and handles input events.
-- The controller is well-structured and easy to understand.
-### Game Document (30 points)
-- The game has a descriptive game document (README) that includes:
-  - An image of classes and functions and connections
-  - The motivation behind the game chosen
-  - The reasoning behind the structure
-  - Future work on how to further enhance the game
-  - Generalization
-### Submitting
-- The project is submitted with the required items (game document, game files, and any additional resources).
-
-Total: 100 points
-
-----------------------------------------------------------------------------------------------------------
-
+- Discuss how the game could be generalized to other types of games or applications.
+  
+  As mentioned previously, our goal is to re-use the model, view, and controller in future Pygame assignments, so we aimed to make this game as generalizable as possible. For this reason, aspects pertaining specifically to the entities in this game (i.e. pong, ball, background, etc.) are not included in the model, view, or controller.  
 

@@ -12,13 +12,6 @@ PADDLE_SIZE = PADDLE_WIDTH, PADDLE_HEIGHT = 16, 100
 PADDLE_POS = PADDLE_X, PADDLE_Y = 0, (displayScreen.SCREEN_HEIGHT - PADDLE_HEIGHT) / 2
 PADDLE_POS_2 = PADDLE_X_2, PADDLE_Y_2 = 784, (displayScreen.SCREEN_HEIGHT - PADDLE_HEIGHT) / 2
 
-# paddleImage1 = pygame.image.load('Stuff/images/red.png')
-# paddleImage2 = pygame.image.load('Stuff/images/blue.png')
-
-# paddleColor1 = pygame.Surface.convert_alpha(paddleImage1)
-# paddleColor2 = pygame.Surface.convert_alpha(paddleImage2)
-# paddleColor = pygame.image.load('Stuff/images/red.png')
-
 paddleColor1 = ('black')
 paddleColor2 = ('black')
 

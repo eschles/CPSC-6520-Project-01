@@ -60,20 +60,9 @@ def updateBallPosition(paddle_surface):
         
     # Check if ball hits paddle 1 or paddle 2 and reverse direction (both x & y) if necessary
     if (po_var.BALL_X < (p_var.PADDLE_WIDTH + po_var.BALL_RADIUS) and po_var.BALL_Y > (p_var.PADDLE_Y) and po_var.BALL_Y < (p_var.PADDLE_Y + p_var.PADDLE_HEIGHT)) or ((po_var.BALL_X > (f_var.SCREEN_WIDTH - p_var.PADDLE_WIDTH - po_var.BALL_RADIUS)) and (po_var.BALL_Y > (p_var.PADDLE_Y_2)) and (po_var.BALL_Y < (p_var.PADDLE_Y_2 + p_var.PADDLE_HEIGHT))):
-    #if (po_var.BALL_X < (p_var.PADDLE_WIDTH + po_var.BALL_RADIUS) and po_var.BALL_Y > (p_var.PADDLE_Y) and po_var.BALL_Y < (p_var.PADDLE_Y + p_var.PADDLE_HEIGHT)):
         # Keep a score of the number of times ball touches the paddle
         mod.PADDLE_HIT += 1
 
         # reverse ball direction
         po_var.ball_velocity_x = -po_var.ball_velocity_x
         po_var.ball_velocity_y = -po_var.ball_velocity_y
-
-    # Check if ball hits paddle 2 and reverse direction (both x & y) if necessary
-    #if po_var.BALL_X < (p_var.PADDLE_WIDTH + po_var.BALL_RADIUS) and po_var.BALL_Y > (p_var.PADDLE_Y_2) and po_var.BALL_Y < (p_var.PADDLE_Y_2 + p_var.PADDLE_HEIGHT):
-    # if ((po_var.BALL_X > (f_var.SCREEN_WIDTH - p_var.PADDLE_WIDTH - po_var.BALL_RADIUS)) and (po_var.BALL_Y > (p_var.PADDLE_Y_2)) and (po_var.BALL_Y < (p_var.PADDLE_Y_2 + p_var.PADDLE_HEIGHT))):
-    #      # Keep a score of the number of times ball touches the paddle
-    #      mod.PADDLE_HIT += 1
-
-    #      # reverse ball direction
-    #      po_var.ball_velocity_x = -po_var.ball_velocity_x
-    #      po_var.ball_velocity_y = -po_var.ball_velocity_y
